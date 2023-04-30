@@ -8,6 +8,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}        
-      - uses: actions/setup-python@y2
+      - uses: actions/setup-python@v2
       - run: python -c "print('Hello GitHub Actions')"
       
