@@ -36,3 +36,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      # Setup/Install node.js on runner
+        - name: Use Node.js
+            uses: actions/setup-node@v3
+            uses: actions/setup-node@v3
+            with:
+               node-version: '12.x'
+        - run: npm ci
+        - run: npm run build --if-present
+        - run: npm test
