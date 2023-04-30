@@ -36,14 +36,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
+      
       # Setup/Install node.js on runner
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '17.7.0'
+      # Install dependencies
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
